@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import AllProduct from '../AllProduct/AllProduct';
 import Product from '../Product/Product';
 
-const Inventory = () => {
+const ManageItem = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -16,11 +17,11 @@ const Inventory = () => {
                 <h1 id='products' className=' text-center mt-5' style={{ 'color': 'orangered' }}>My Products</h1>
                 <div className="products-container">
                     {
-                        products?.map(product => <Product
+                        products?.map(product => <AllProduct
                             key={product.id}
                             product={product}
                         >
-                        </Product>)
+                        </AllProduct>)
                     }
                 </div>
             </div>
@@ -28,4 +29,4 @@ const Inventory = () => {
     );
 };
 
-export default Inventory;
+export default ManageItem;

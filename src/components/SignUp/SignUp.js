@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import './SignUp.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import GoogleSignin from '../GoogleSignin/GoogleSignin';
 
 
 
@@ -60,6 +61,7 @@ const Singup = () => {
                     <ToastContainer />
                 </form>
             </div>
+            <GoogleSignin></GoogleSignin>
         </div >
     );
 };
