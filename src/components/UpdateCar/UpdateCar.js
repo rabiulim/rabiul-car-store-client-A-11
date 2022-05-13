@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+
 const UpdateCar = () => {
     const { id } = useParams();
     const [car, setCar] = useState({});
+    const [updated, setUpdated] = useState(false);
+
     useEffect(() => {
         const url = `http://localhost:5000/car/${id}`
 
@@ -11,7 +14,7 @@ const UpdateCar = () => {
             .then(res => res.json())
             .then(data => setCar(data))
 
-    }, [])
+    }, [updated])
     const handleQuantity = (event) => {
         event.preventDefault();
         const previousQuantity = parseInt(car.quantity)
@@ -30,7 +33,9 @@ const UpdateCar = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                if (data.modifiedCount) {
+                    setUpdated(!updated);
+                }
             })
     }
     const handleDelivered = () => {
@@ -47,46 +52,38 @@ const UpdateCar = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                if (data.modifiedCount) {
+                    setUpdated(!updated);
+                }
             })
     }
 
     return (
-
-        <div>
-            <h1>update user: {car.name}</h1>
-            <form onSubmit={handleQuantity}>
-                <input className='border' name='quantity' type="number" />
-                <button type='submit'>Add Quantity</button>
-            </form>
-            <table className='border w-100'>
-                <thead>
-
-                    <tr>
-                        <th>Image</th>
-
-                        <th>Quantity</th>
-                        <th>SupplierName</th>
-                        <th>Price</th>
-                        <th>id</th>
-                        <th>Delivered</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img height={"50px"} src={car.image} alt="" /></td>
-                        <td>{car.quantity}</td>
-                        <td>{car.SupplierName}</td>
-                        <td>{car.price}</td>
-                        <td>{car.id}</td>
-                        <td><button onClick={handleDelivered}>Delivered</button></td>
-                    </tr>
-                </tbody>
-            </table>
-
+        <div className='mx-auto w-100 container'>
+            <div class="card mb-3 mx-auto flex "  >
+                <div class="row align-items-center g-0">
+                    <div class="col-md-6">
+                        <img src={car.image} height={'300px'} class="img-fluid rounded-start" alt="..." />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body text-start ">
+                            <h5 class="card-title">Update Car</h5>
+                            <p class="card-text">{car.description}</p>
+                            <p class="card-text">{car.name}</p>
+                            <p class="card-text">price:{car.price}</p>
+                            <p class="card-text">Quantity:{car.quantity}</p>
+                            <button onClick={handleDelivered} className='btn btn-danger'>Delivered</button>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <form onSubmit={handleQuantity}>
+                                <input className='border border-primary outline-none' name='quantity' type="number" />
+                                <input className='btn btn-primary' type="submit" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    );
+    )
 };
 
 export default UpdateCar;

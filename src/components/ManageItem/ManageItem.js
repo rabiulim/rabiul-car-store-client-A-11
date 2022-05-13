@@ -35,8 +35,8 @@ const ManageItem = () => {
                 <h1 id='products' className=' text-center mt-5' style={{ 'color': 'orangered' }}>My Products</h1>
                 <div className="products-container">
                     {
-                        products?.map(product => <div key={product._id} className='product-card'>
-                            <img className='w-100' src={product.image} alt="" />
+                        products?.map(product => <div key={product._id} className='product-card overflow-hidden'>
+                            <img className='w-100 ' src={product.image} alt="" />
                             <h2>Name: {product.name}</h2>
                             <p className='fs-5'><small>{product.description}</small></p>
                             <p className='fs-4'>Price: {product.price}</p>
