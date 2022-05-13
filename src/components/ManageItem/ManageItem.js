@@ -11,6 +11,22 @@ const ManageItem = () => {
     }, [])
     const handleCarDelete = (id) => {
         console.log('deleting user id', id)
+        const proceed = window.confirm('Are you sure you want to delete?');
+        if (proceed) {
+            console.log('deleting user with id, ', id);
+            const url = `http://localhost:5000/car/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        console.log('deleted');
+                        const remaining = products.filter(product => product._id !== id);
+                        setProducts(remaining);
+                    }
+                })
+        }
     }
 
     return (
