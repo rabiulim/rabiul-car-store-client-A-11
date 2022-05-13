@@ -5,7 +5,7 @@ import './Product.css'
 const Product = ({ product }) => {
     const navigate = useNavigate();
     const handleNavigateUpdateDetails = (id) => {
-        navigate(`/inventory/${id}`)
+        navigate(`/car/${id}`)
     }
     const { _id, name, price, description, image, quantity, SupplierName } = product;
     return (

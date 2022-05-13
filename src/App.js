@@ -12,7 +12,7 @@ import MyItems from './components/MyItems/MyItems';
 import NotFound from './components/NotFound/NotFound';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Singup from './components/SignUp/SignUp';
-import UpdateDetails from './components/UpdateDetails/UpdateDetails';
+import UpdateCar from './components/UpdateCar/UpdateCar';
 
 function App() {
   return (
@@ -21,13 +21,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home />} />
-        <Route path='/inventory/:id' element={<UpdateDetails />} />
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/manage-item' element={<RequireAuth>
           <ManageItem />
         </RequireAuth>}></Route>
         <Route path='/add-items' element={<AddItems />}
         ></Route>
+        <Route path='/add-items' element={<AddItems />}
+        ></Route>
+        <Route path='/car/:id' element={<UpdateCar></UpdateCar>}></Route>
         <Route path='/my-items' element={<RequireAuth>
           <MyItems />
         </RequireAuth>}></Route>
