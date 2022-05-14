@@ -3,8 +3,8 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className='footer'>
-            <p>Rabiul Islam||2022</p>
-            <p>All the Rights Only for Ower</p>
+            <p>copyright © 2022 Rabiul Car Store</p>
+            <p>All Right Reserved.|| Narayangang, Dhaka</p>
         </div>
     );
 };

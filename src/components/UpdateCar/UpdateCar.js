@@ -59,24 +59,26 @@ const UpdateCar = () => {
     }
 
     return (
-        <div className='mx-auto w-100 container'>
+        <div className='mx-auto w-100 container my-5'>
             <div class="card mb-3 mx-auto flex "  >
                 <div class="row align-items-center g-0">
                     <div class="col-md-6">
-                        <img src={car.image} height={'300px'} class="img-fluid rounded-start" alt="..." />
+                        <img src={car.image} class="img-fluid rounded-start" alt="..." />
+                        <p className='card-text fs-5'>Id:{car._id}</p>
                     </div>
                     <div class="col-md-6">
                         <div class="card-body text-start ">
-                            <h5 class="card-title">Update Car</h5>
-                            <p class="card-text">{car.description}</p>
-                            <p class="card-text">{car.name}</p>
-                            <p class="card-text">price:{car.price}</p>
-                            <p class="card-text">Quantity:{car.quantity}</p>
+                            <h5 class="card-title fs-4">Update Your Inventory</h5>
+                            <p class="card-text fs-5">{car.description}</p>
+                            <p class="card-text fs-5"> Name{car.name}</p>
+                            <p class="card-text fs-5">price:{car.price}</p>
+                            <p class="card-text fs-5">Quantity:{car.quantity}</p>
+                            <p class="card-text fs-5">Supplier:{car.SupplierName}</p>
                             <button onClick={handleDelivered} className='btn btn-danger'>Delivered</button>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
                             <form onSubmit={handleQuantity}>
-                                <input className='border border-primary outline-none' name='quantity' type="number" />
-                                <input className='btn btn-primary' type="submit" />
+                                <input className='border border-primary outline-none' name='quantity' type="number" placeholder='Enter Number to restock' />
+                                <input className='btn btn-danger' type="submit" value="Restock" />
                             </form>
                         </div>
                     </div>

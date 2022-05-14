@@ -18,12 +18,12 @@ const Products = () => {
     }, [])
 
     return (
-        <div id="Products" className='container'>
+        <div id="Products" className='container '>
             <div className="row">
                 <h1 id='products' className=' text-center mt-5' style={{ 'color': 'orangered' }}>Top Products</h1>
                 <div className="products-container">
                     {
-                        products?.slice(0, 6).map(product => <div className='product-card'>
+                        products?.slice(0, 6).map(product => <div className='product-card overflow-hidden'>
                             <img className='w-100' src={product.image} alt="" />
                             <h2>Name: {product.name}</h2>
                             <p className='fs-5'><small>{product.description}</small></p>

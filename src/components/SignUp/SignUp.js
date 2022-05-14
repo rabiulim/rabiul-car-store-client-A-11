@@ -11,9 +11,7 @@ import GoogleSignin from '../GoogleSignin/GoogleSignin';
 
 const Singup = () => {
 
-    const [sendEmailVerification, sending, Verifyerror] = useSendEmailVerification(
-        auth
-    );
+    const [sendEmailVerification, sending, Verifyerror] = useSendEmailVerification(auth);
 
     const navigate = useNavigate();
     const [
@@ -59,9 +57,9 @@ const Singup = () => {
                     <button className='signup-submit' type="submit">Sing-up</button>
                     <p className='allready'>Already have an account? <Link className='text-white text-decoration-none' to="/login">Plz Login</Link> </p>
                     <ToastContainer />
+                    <GoogleSignin></GoogleSignin>
                 </form>
             </div>
-            <GoogleSignin></GoogleSignin>
         </div >
     );
 };

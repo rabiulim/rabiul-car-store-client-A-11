@@ -1,0 +1,40 @@
+.tet {
+    margin-left: auto;
+    text-align: center;
+    text-align: justify;
+    width: 50%;
+
+}
+
+.img {
+    width: 550px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.two {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 600px) {
+    .two {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        height: 1000px;
+        text-align: center;
+    }
+
+    .img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .tet {
+        text-align: center;
+        text-align: justify;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+}

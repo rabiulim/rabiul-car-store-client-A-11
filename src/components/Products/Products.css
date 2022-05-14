@@ -4,6 +4,16 @@
     grid-gap: 20px;
 }
 
+.product-card {
+    border: 2px solid red;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    height: 300px;
+}
+
 /* make services responsive */
 @media only screen and (max-width:576px) {
     .products-container {

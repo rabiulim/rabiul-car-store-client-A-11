@@ -1,8 +1,9 @@
 .login-container {
-    background: rgb(67, 97, 238);
-    height: 750px;
+    background: rgb(130, 67, 238);
+    height: 600px;
     width: 50%;
     margin-top: 50px;
+    margin-bottom: 50px;
     padding-top: 30px;
 
     border-radius: 15px;
