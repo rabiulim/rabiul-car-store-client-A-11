@@ -6,7 +6,7 @@ const MyItems = () => {
     const [products, setProducts] = useState([]);
     const [user] = useAuthState(auth);
     const email = user?.email;
-    const url = `http://localhost:5000/productsbyuser?email=${email}`
+    const url = `https://immense-island-40841.herokuapp.com/productsbyuser?email=${email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -18,7 +18,7 @@ const MyItems = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
             console.log('deleting user with id, ', id);
-            const url = `http://localhost:5000/car/${id}`;
+            const url = `https://immense-island-40841.herokuapp.com/car/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

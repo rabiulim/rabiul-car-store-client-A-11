@@ -12,7 +12,7 @@ const Products = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/car')
+        fetch('https://immense-island-40841.herokuapp.com/car')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])

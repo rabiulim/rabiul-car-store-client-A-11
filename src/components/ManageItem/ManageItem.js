@@ -5,7 +5,7 @@ const ManageItem = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/car')
+        fetch('https://immense-island-40841.herokuapp.com/car')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -14,7 +14,7 @@ const ManageItem = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
             console.log('deleting user with id, ', id);
-            const url = `http://localhost:5000/car/${id}`;
+            const url = `https://immense-island-40841.herokuapp.com/car/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

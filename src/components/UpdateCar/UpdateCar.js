@@ -8,7 +8,7 @@ const UpdateCar = () => {
     const [updated, setUpdated] = useState(false);
 
     useEffect(() => {
-        const url = `http://localhost:5000/car/${id}`
+        const url = `https://immense-island-40841.herokuapp.com/car/${id}`
 
         fetch(url)
             .then(res => res.json())
@@ -22,7 +22,7 @@ const UpdateCar = () => {
         const quantity = parseInt(event.target.quantity.value);
         const updateQuantity = previousQuantity + quantity
         console.log('quantity', quantity)
-        const url = `http://localhost:5000/update/${id}`
+        const url = `https://immense-island-40841.herokuapp.com/update/${id}`
         fetch(url, {
             method: "PUT",
             headers: {
@@ -41,7 +41,7 @@ const UpdateCar = () => {
     const handleDelivered = () => {
         const previousQuantity = parseInt(car.quantity)
         const updateQuantity = previousQuantity - 1;
-        const url = `http://localhost:5000/update/${id}`
+        const url = `https://immense-island-40841.herokuapp.com/update/${id}`
         fetch(url, {
             method: "PUT",
             headers: {

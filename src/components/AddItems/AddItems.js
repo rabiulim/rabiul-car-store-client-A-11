@@ -22,7 +22,7 @@ const AddItems = () => {
         };
 
         // send data to the server
-        fetch('http://localhost:5000/car', {
+        fetch('https://immense-island-40841.herokuapp.com/car', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
