@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import ExtraSection1 from '../ExtraSection/ExtraSection1';
+import ExtraSection2 from '../ExtraSection/ExtraSection2';
 import Products from '../Products/Products';
 
 const Home = () => {
@@ -16,8 +17,8 @@ const Home = () => {
                                 alt="First slide"
                             />
                             <Carousel.Caption>
-                                <h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                <h3>Welcome to Our Car Store</h3>
+                                <p>If you looking very Awesome car , you are most welcome in our Store.So Expole our Stock.</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -28,8 +29,8 @@ const Home = () => {
                             />
 
                             <Carousel.Caption>
-                                <h3>Second slide label</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h3>Cool Car is waiting For you</h3>
+                                <p>Every Cool car collection is available our Stock. So exploe our Stock.</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -40,8 +41,8 @@ const Home = () => {
                             />
 
                             <Carousel.Caption>
-                                <h3>Third slide label</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                <h3>Cool mileage in our Stock</h3>
+                                <p>Our car stock is famous for great mileage . So don't late come in Our Stock</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
@@ -50,6 +51,7 @@ const Home = () => {
             </div>
             <Products></Products>
             <ExtraSection1></ExtraSection1>
+            <ExtraSection2></ExtraSection2>
         </div>
     );
 };

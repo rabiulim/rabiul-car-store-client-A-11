@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import './AddItem.css'
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 
@@ -36,17 +37,17 @@ const AddItems = () => {
             })
     }
     return (
-        <div className='container text-center  my-5'>
-            <form onSubmit={handleAddItem} className='w-25 mx-auto' >
-                <h1 className='text-dark fw-b '>Add Your Item</h1>
+        <div className='add-from'>
+            <form onSubmit={handleAddItem}  >
+                <h1 className=''>Add Your Item</h1>
                 <input type="text" name='image' placeholder='Image URL' /> <br />
                 <input type="text" name='name' placeholder='Name' /> <br />
-                <input type="email" name='email' placeholder='Your Email' value={user?.email} disabled required /> <br />
-                <input className='w-75' type="text-area" name='description' placeholder='Description' required /> <br />
+                <input type="email" name='email' placeholder='Your Email' value={user?.email} required /> <br />
+                <input type="text-area" name='description' placeholder='Description' required /> <br />
                 <input type="text" name='price' placeholder='Price' required /> <br />
                 <input type="text" name='quantity' placeholder='Quantity' required /> <br />
                 <input type="text" name='SupplierName' placeholder='SupplierName' required /> <br />
-                <button className='addItem' type="submit">Add Item</button>
+                <button type="submit">Add Item</button>
             </form>
             <ToastContainer />
         </div>

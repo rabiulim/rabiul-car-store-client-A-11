@@ -12,7 +12,7 @@ const ExtraSection1 = () => {
             <div className="tet">
                 <h2>Ouer Best Service</h2>
                 <p>Rent a car luxury dubai. Supercars. Exclusive SUVs. Booking in Few Clicks. Try Now! Best Luxury Car Rental Dubai. Free Delivery to Hotel/Airport. No Hidden Fees! Long-Term Rental Discount. No Hidden Payments. Only Luxurious Cars. Easy to Rent. Various Payment Methods. Clients' Reviews on Site.</p>
-                <Link to='manage-item'><button className='btn btn-primary'>More info</button></Link>
+                <Link to='/manage-item'><button className='btn btn-primary'>More info</button></Link>
             </div>
         </div>
     );

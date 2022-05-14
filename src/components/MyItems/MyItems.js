@@ -40,6 +40,7 @@ const MyItems = () => {
                     <tr>
                         <th>Image</th>
 
+                        <th>Car Name</th>
                         <th>Quantity</th>
                         <th>SupplierName</th>
                         <th>Price</th>
@@ -51,6 +52,7 @@ const MyItems = () => {
                     {
                         products.map(product => <tr>
                             <td><img height={"50px"} src={product.image} alt="" /></td>
+                            <td>{product.name}</td>
                             <td>{product.quantity}</td>
                             <td>{product.SupplierName}</td>
                             <td>{product.price}</td>
