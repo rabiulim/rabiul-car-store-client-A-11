@@ -1,8 +1,9 @@
 # Rabiul Car Store
+It is a Awesome Car Inventory or Stock house website, You will can use it so esily so explore it!!!
 
-Rabiul Car Store link: [Rabiul Car Store](https://github.com/facebook/create-react-app).
+Rabiul Car Store live link: https://fullstack-assignment11-client.web.app/.
 
-## [Rabiul Car Store](https://github.com/facebook/create-react-app)
+## [Rabiul Car Store](https://fullstack-assignment11-client.web.app/)
 
 ### Features of Rabiul Car Store
 * This is a Car Store website
